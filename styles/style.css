@@ -8,10 +8,18 @@
   }
 
 /*Shared Styles*/
+.margin {
+    margin-top: 130px;
+}
+
 .display-flex {
     display: flex;
 }
 
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
 
 /*Dark 02*/
 .text-gray {
@@ -27,13 +35,17 @@
     background-color: rgba(255, 144, 14, 0.1);
 }
 
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
 /*Navbar*/
 
 .navbar {
     justify-content: space-between;
     align-items: center; 
-    border: 2px dashed rgb(1, 9, 1);/* Navbar Border*/
+    
 }
 
 .nav-item {
@@ -70,7 +82,6 @@
 
 .banner-content { /*Banner Border*/
     max-width: 850px;
-    border: 2px dotted #FF900E;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 40px;
@@ -92,11 +103,107 @@
     width: 100%;
 }
 
+/* Teams and Our Features */
+#QuickList {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+#OfOur {
+    color: #131313;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+#Features {
+    color: #FF900E;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.our-features {
+    margin-left: 130px;
+    max-width: 530px;
+   
+}
+
+.teams {
+    display: flex;
+    align-items: center;
+    
+}
+
+.team-img-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);  /* Creates 2 columns of equal width (1fr each) */
+    gap: 24px;
+    
+}
+
+
+/* Some Facts */
+
+.facts-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.fact-card {
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+    gap: none;
+}
+
+.fact-number {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.fact-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #727272;
+    margin-top: 10px;
+}
+
+
+
 /*Responsive Media Queries*/
 
 /*Mobile Devices*/
 @media screen and (max-width: 576px) {
-    .navbar, .nav-link {
+    .navbar, 
+    .nav-link,
+    .teams {
         flex-direction: column;
+    }
+
+    .team-img-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .our-features {
+        margin-left: 20px;
+    }
+}
+
+/*Tablet Devices*/
+@media screen and (min-width: 577px) and (max-width: 992px){
+    .teams {
+        flex-direction: column;
+    }   
+    
+    .our-features {
+        margin-left: 50px;
     }
 }
