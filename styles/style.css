@@ -12,6 +12,10 @@
     margin-top: 130px;
 }
 
+.margin-bottom {
+    margin-bottom: 130px;
+}
+
 .display-flex {
     display: flex;
 }
@@ -103,7 +107,65 @@ main {
     width: 100%;
 }
 
+/*Features you will love & enjoy*/
+
+.feature-content-section {
+    gap: 150px;
+}
+
+#feature-title-bar {
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+
+.feature-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.feature-content > p {
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    /* margin-bottom: 10px; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.feature-content-card {
+    padding: 30px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+}
+
+.architect-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.badge {
+    padding: 40px 45px ;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+.ten-plus-Year {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.experience {
+    font-size: 1.28rem;
+    font-weight: 400;
+}
+
+
 /* Teams and Our Features */
+
+
 #QuickList {
     font-size: 2.8rem;
     font-weight: 500;
@@ -130,7 +192,6 @@ main {
 .teams {
     display: flex;
     align-items: center;
-    
 }
 
 .team-img-container {
@@ -143,15 +204,27 @@ main {
 
 /* Some Facts */
 
+.section-title {
+    margin-bottom: 24px;
+}
+
+section > p {
+    margin-bottom: 100px;
+}
+
 .facts-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */ /* গ্রিড করলে কনটেন্ট ভালো মতো দেখাচ্ছে না, কিন্তু ফ্লেক্স ব্যবহার করলে ঠিক আছে */
+    display: flex;
+    justify-content: space-around;
+    /* align-content: center; */
+    gap: 20px;
 }
 
 .fact-card {
     border: 1px solid #FF900E;
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
     border-radius: 8px;
     text-align: center;
     display: flex;
@@ -160,6 +233,7 @@ main {
     justify-content: center;
     padding: 35px;
     gap: none;
+    /* margin-left: 40px; */
 }
 
 .fact-number {
@@ -177,6 +251,51 @@ main {
 }
 
 
+/*Our Sponsors*/
+.sponsors-info {
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sponsor-title {
+    margin-bottom: 24px;
+}
+
+.sponsor-paragraph {
+    margin-bottom: 50px;
+}
+
+
+/* এখানে ফ্লেক্স ব্যবহার করলে ঠিক আছে*/
+/* .sponsors-logo { 
+    display: flex;
+    justify-content: space-between;
+} */
+
+.sponsors-logo {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* border: 1px solid gray; */
+}
+
+
+.sponsors-logo img {
+    filter: grayscale(100%);
+}
+
+/* Footer */
+footer {
+    /* max-width: 100%; */
+    font-size: 1.25rem;
+    background-color: rgba(255, 244, 231, 1);
+    text-align: center;
+    padding: 35px;
+    border-radius: 8px;
+}
+
+
+
 
 /*Responsive Media Queries*/
 
@@ -188,12 +307,36 @@ main {
         flex-direction: column;
     }
 
-    .team-img-container {
+    .team-img-container, .facts-container, .sponsors-logo {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .feature-content-section, .facts-container {
+        flex-direction: column;
+    }
+
+    .facts-container {
+        align-items: center;
+    }
+
+    .badge {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .sponsors-logo {
+        justify-items: center;
+        gap: 50px;
     }
 
     .our-features {
         margin-left: 20px;
+    }
+
+    footer {
+        padding: 10px;
+        text-align: center;
+        font-size: 1rem;
     }
 }
 
@@ -205,5 +348,15 @@ main {
     
     .our-features {
         margin-left: 50px;
+    }
+
+    .sponsors-logo {
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        gap: 50px;
+    }
+
+    .facts-container {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
